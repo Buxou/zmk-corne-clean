@@ -1,32 +1,19 @@
 /*
- * Copyright (c) 2023 The ZMK Contributors
+ * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-
-#define DEF 0
-#define LWR 1
-#define RSE 2
-#define ADJ 3
-
-&lt { quick-tap-ms = <200>; };
-&mt { quick-tap-ms = <200>; };
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
-  chosen {
-    zmk,matrix_transform = &crkbd_transform;
-  };
-};
+    keymap {
+        compatible = "zmk,keymap";
 
-/ {
-        keymap {
-                compatible = "zmk,keymap";
-
-                default_layer {
+          default_layer {
 // -----------------------------------------------------------------------------------------
 // |   ~  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  [   |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |CTRL/'|
@@ -77,7 +64,7 @@
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0  &bt BT_CLR
    &none      &none        &none        &none        &none        &none              &none        &none        &none        &none        &none         &none
                                                            &trans &none &trans       &trans &none &trans
-                        >;
-                };
+            >;
         };
+    };
 };
