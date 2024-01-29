@@ -11,12 +11,6 @@
 
 &led_strip { chain-length = <27>; };
 
-&mt {
-    bindings = <&kp>, <&kp>;
-
-    quick-tap-ms = <200>;
-};
-
 / {
     keymap {
         compatible = "zmk,keymap";
