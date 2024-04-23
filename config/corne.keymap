@@ -17,6 +17,16 @@
 &mt { quick-tap-ms = <200>; };
 
 / {
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LSHFT &kp LALT>, <&macro_tap>;
+
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
